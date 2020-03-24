@@ -116,7 +116,7 @@ def root():
         data = {'threshold': '0.5'}
 
         # TODO T1: replace model URL placeholder
-        model_url = args.ml_endpoint.rstrip('/') + '**TODO**'
+        model_url = args.ml_endpoint.rstrip('/') + '/model/predict'
 
         # Send image file form to model endpoint for prediction
         try:
@@ -143,7 +143,7 @@ def root():
 
         result = []
         # TODO T2: uncomment next line and replace placeholder
-        # result = output_data['**TODO**']
+        result = output_data['predictions']
 
         if len(result) == 0:
             msg = 'No objects detected, try uploading a new image'
